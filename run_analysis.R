@@ -4,7 +4,7 @@ rm(list=ls(all=TRUE))
 library(dplyr)
 
 #*** Working Directory ***
-mydir <- "C:/Users/chidom/Dropbox/Coursera/Data Science Specialization/GettingNcleaingdata/Assignments"
+mydir <- "C:/Users/name/Dropbox/Coursera/Data Science Specialization/GettingNcleaningdata/Assignments"
 setwd(mydir)
 
     ##### Getting and Cleaning Data Project #####
@@ -114,8 +114,3 @@ names(Data)
 Data2<-aggregate(. ~subject + activity, Data, mean)
 Data2<-Data2[order(Data2$subject,Data2$activity),]
 write.table(Data2, file = "tidydata.txt",row.name=FALSE)
-
-### Prouducing Codebook
-
-library(knitr)
-knit2html("codebook.Rmd");
