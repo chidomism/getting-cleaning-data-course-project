@@ -49,16 +49,6 @@ dataActivityTrain <- read.table(file.path(path_rf, "train", "Y_train.txt"),heade
 dataFeaturesTest  <- read.table(file.path(path_rf, "test" , "X_test.txt" ),header = FALSE)
 dataFeaturesTrain <- read.table(file.path(path_rf, "train", "X_train.txt"),header = FALSE)
 
-### Look at the properties of the above varibles
-
-str(dataSubjectTrain)
-str(dataSubjectTest)
-
-str(dataActivityTest)
-str(dataActivityTrain)
-
-str(dataFeaturesTest)
-str(dataFeaturesTrain)
 
 ### Merges the training and the test datasets to create a single data set
 
